@@ -52,12 +52,15 @@ Key objectives include:
   
 - These derived percentages facilitate direct comparisons across different time frames and census tracts, providing clearer insights into how these communities’ spatial distributions and relative proportions have evolved. Moreover, Fisher-Jenks classification based on the 2018 distribution were first found and same breaks were used for 2012 to ensure consistency across temporal comparisons. To show side by side comparisons, small multiples appraoch was used. 
 
- ### **Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)**
+ ### Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)
 
 ![map1](map 1.png)
 
 The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, reinforcing these areas as long-standing centers of Black community life. Conversely, **Wards 1, 4, and 5 witnessed declines**, possibly reflecting patterns of redevelopment, gentrification, and changing housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
 
 **Although the city’s overall population may be growing more diverse, the spatial patterns suggest that certain wards remain predominantly one group, indicating that some form of racial and ethnic clustering persists.** In other words, while a city-wide perspective hints at increasing diversity, the localized view raises questions about whether this diversity is evenly distributed or concentrated in certain areas, potentially influencing access to resources and long-term educational outcomes.
+
+---
+
 
 
