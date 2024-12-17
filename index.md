@@ -44,7 +44,7 @@ Key objectives include:
   - For effective mapping, all layers (Ward, tracts etc) were reprojected to Maryland State Plane (EPSG:2248).
   - Applied **Fisher-Jenks classification** based on the 2018 distribution and used the same breaks for 2012 to ensure consistency across temporal comparisons.
 
-##                      Minority Racial and Ethnic Demographic Changes in DC (2012 and 2018)
+## Minority Racial and Ethnic Demographic Changes in DC (2012 and 2018)
 - Looking at the demographic makeup of Washington, D.C., three primary groups—**White**, **Non-Hispanic Black**, and **Hispanic**—account for nearly **95%** of the total population. Given their prominence, these three populations form the core focus of this analysis. To emphasize shifts within the two minority communities (**Non-Hispanic Black** and **Hispanic**), we specifically computed each group’s percentage share of the total population:
   
       `Non-Hispanic Black Population % = (Non-Hispanic Black Population (Estimate) / Total Population (Estimate) * 100`
@@ -52,7 +52,7 @@ Key objectives include:
   
 - These derived percentages facilitate direct comparisons across different time frames and census tracts, providing clearer insights into how these communities’ spatial distributions and relative proportions have evolved. Moreover, Fisher-Jenks classification based on the 2018 distribution were first found and same breaks were used for 2012 to ensure consistency across temporal comparisons. To show side by side comparisons, small multiples appraoch was used. 
 
- ###                     **Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)**
+ ### **Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)**
 
 ![map1](map 1.png)
 
