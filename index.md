@@ -52,7 +52,7 @@ Key objectives include:
   
 - These derived percentages facilitate direct comparisons across different time frames and census tracts, providing clearer insights into how these communities’ spatial distributions and relative proportions have evolved. Moreover, Fisher-Jenks classification based on the 2018 distribution were first found and same breaks were used for 2012 to ensure consistency across temporal comparisons. To show side by side comparisons, small multiples appraoch was used. 
 
- ### Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)
+### **Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)**  
 
 ![map1](map 1.png)
 
@@ -62,5 +62,11 @@ The maps show that, between 2012 and 2018, the **geographic distribution of the 
 
 ---
 
+## Interactive Map: DC Public Schools (2018)
+
+##### *Below is an interactive map overlaying school-level data on diversity and STAR ratings. You can use the layer control (top-right corner) to toggle between different datasets (Diversity & Plurality Status, School STAR Rating, and Wards). Hovering over a school marker displays basic details, and clicking on a marker opens a pop-up with more in-depth information.*
+
+<iframe src="final_map_nb (1).html" height="850" width="900"></iframe>
+*You can explore this map [as its own web page here](final_map_nb (1).html).*
 
 
