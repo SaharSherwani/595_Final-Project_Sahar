@@ -62,6 +62,14 @@ The maps show that, between 2012 and 2018, the **geographic distribution of the 
 
 ---
 
+![map2a](map 2a.png)
+
+---
+
+![map2b](map 2b.png)
+
+---
+
 ## Interactive Map: DC Public Schools (2018)
 
 ##### *Below is an interactive map overlaying school-level data on diversity and STAR ratings. You can use the layer control (top-right corner) to toggle between different datasets (Diversity & Plurality Status, School STAR Rating, and Wards). Hovering over a school marker displays basic details, and clicking on a marker opens a pop-up with more in-depth information.*
