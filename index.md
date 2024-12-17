@@ -56,8 +56,7 @@ Key objectives include:
 
 ![map1](map 1.png)
 
-**Observations:**
-Between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, reinforcing these areas as long-standing centers of Black community life. Conversely, **Wards 1, 4, and 5 witnessed declines**, possibly reflecting patterns of redevelopment, gentrification, and changing housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
+The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, reinforcing these areas as long-standing centers of Black community life. Conversely, **Wards 1, 4, and 5 witnessed declines**, possibly reflecting patterns of redevelopment, gentrification, and changing housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
 
 **Although the city’s overall population may be growing more diverse, the spatial patterns suggest that certain wards remain predominantly one group, indicating that some form of racial and ethnic clustering persists.** In other words, while a city-wide perspective hints at increasing diversity, the localized view raises questions about whether this diversity is evenly distributed or concentrated in certain areas, potentially influencing access to resources and long-term educational outcomes.
 
