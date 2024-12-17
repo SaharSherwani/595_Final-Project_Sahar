@@ -1,1 +1,60 @@
+## Exploring Changes in Racial Diversity and Impact on Educational Outcomes in D.C. Public Schools (2012–2018)
+
+**Submitted by:** *Sahar Khan Sherwani, MPP-MPI 2024, Edward J. Bloustein School of Planning and Public Policy, Rutgers University*  
+**Final Project Submitted for:** *Command-Line GIS (Fall 2024)*  
+**Course Professor:** *Will Payne, Ph.D.*
+
+---
+
+### Focus of This Project
+
+This project examines how the **racial and ethnic composition**—with a particular emphasis on **Black and Hispanic student populations**—in Washington, D.C. public schools (DCPS) evolved between **School Year (SY) 2012–2013 and SY 2018–2019**, and how these shifts may correlate with educational outcomes and resource changes.
+
+         Key objectives include:
+          - Analyzing the changes in minority (Black and Hispanic) racial and ethnic composition across the two timeframes.
+          - Exploring whether shifts in school demographics have an assocition with educational outcomes (i.e., school performance) or changes in the school system (i,e., closures, new openings), to understand the impact of evolving diversity.
+
+---
+
+#### Research Questions
+
+1. **How has the racial composition of D.C. public schools changed between the 2012–2013 and 2018–2019 school years?**
+2. **How do changes in racial and ethnic composition (especially Black and Hispanic populations) relate to educational outcomes or changes resource allocations?**
+
+---
+
+### Background
+
+- **Diverse Demographics:**  
+  Washington, D.C., though geographically compact, is demographically intricate—each of its **eight wards** mirrors distinct community identities and population trends. The local schools often reflect these broader neighborhood demographics.
+
+- **Legacy of Segregation and Integration Efforts:**  
+  While landmark cases like *Bolling v. Sharpe (1954)* sought to dismantle de jure segregation in D.C. schools, **de facto segregation persists**, with many schools still predominantly serving one racial or ethnic group. This legacy highlights the complexity of achieving meaningful integration in practice.
+
+- **Benefits of Racially Diverse Schools:**  
+  Social science research indicates that **greater racial and ethnic diversity within schools can enhance resource allocation, foster peer learning, and improve long-term student outcomes**. Diverse academic environments have the potential to bridge achievement gaps and promote equity across the educational landscape.
+
+---
+
+**Datasets and Sources:**  
+- **Hispanic or Latino Origin by Race (Table B03002) | American Community Survey (ACS) 5-Year Estimates (2012 & 2018)**  
+  - **Source: U.S. Census Bureau  [data.census.gov](https://data.census.gov/table/ACSDT1Y2021.B03002)*
+  - The data was accessed via the Census API, and included estimates (E) and margins of error (M) for each racial category. For the purposes of this project, only DC state level census tract data was then brought in and matched to these.
+  - CVs were calculated using `census_data_aggregator` to determine data reliability, and the zero or missing population values were replaced with `NaN` to avoid division errors; and for mapping, only reliable estimates (CV ≤ 40%) were used. 
+  - For effective mapping, all layers (Ward, tracts etc) were reprojected to Maryland State Plane (EPSG:2248).
+  - Applied **Fisher-Jenks classification** based on the 2018 distribution and used the same breaks for 2012 to ensure consistency across temporal comparisons.
+
+### Minority Racial and Ethnic Demographic Changes in DC (2012 and 2018)
+- Looking at the demographic make up of DC, whereby three demographic groups, namely White, Non-Hispanic Black, and Hispanic population, make up almost 95% of the population, these three groups were the focus of the analysis. For this purpose, the demographics compositions of the two minority groups (Non-Hispanic Black and Hispanic) were mapped to see the changing demographics of DC. Population percentages of the two were seperately computed:
+                   `NonHisp_Black_% = (NonHisp_Black_E / Total_Pop_E) * 100`
+                   `Hisp% = (Hisp_E / Total_Pop_E) * 100`
+- Fisher-Jenks classification based on the 2018 distribution were first found and same breaks were used for 2012 to ensure consistency across temporal comparisons. 
+
+**Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)**
+
+![map1](map 1.png)
+
+**Observations:**
+- Certain wards (Ward 7 and 8) show an **increase in Non-Hispanic Black populations** between 2012 and 2018. Other areas (Ward 1, 4, and 5) indicate a **decrease in Non-Hispanic Black proportions**, suggesting demographic shifts, and potential gentrification effects. Wards 1 and 2 consistently present **lower Non-Hispanic Black percentages** across both years, which allude to the fact that they are historically segregated areas. 
+
 
