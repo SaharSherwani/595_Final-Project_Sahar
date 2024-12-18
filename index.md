@@ -8,10 +8,10 @@
 
 ## Focus of This Project
 
-This project examines how the **racial and ethnic composition**—with a particular emphasis on **Black and Hispanic student populations**—in Washington, D.C. public schools (DCPS) evolved between **School Year (SY) 2012–2013 and SY 2018–2019**, and how these shifts may correlate with educational outcomes and resource changes.
+This project examines how the **racial and ethnic composition**—with a particular emphasis on **Non-Hispanic Black and Hispanic student populations**—in Washington, D.C. public schools (DCPS) evolved between **School Year (SY) 2012–2013 and SY 2018–2019**, and how these shifts may correlate with educational outcomes and resource changes.
 
 Key objectives include:
-- Analyzing the changes in minority (Black and Hispanic) racial and ethnic composition across the two timeframes.
+- Analyzing the changes in minority (Non-Hispanic Black and Hispanic) racial and ethnic composition across the two timeframes.
 - Exploring whether shifts in school demographics have an assocition with educational outcomes (i.e., school performance) or changes in the school system (i,e., closures, new openings), to understand the impact of evolving diversity.
 
 ---
@@ -19,7 +19,7 @@ Key objectives include:
 #### Research Questions
 
 1. **How has the racial composition of D.C. public schools changed between the 2012–2013 and 2018–2019 school years?**
-2. **How do changes in racial and ethnic composition (especially Black and Hispanic populations) relate to educational outcomes or changes resource allocations?**
+2. **How do changes in racial and ethnic composition (especially Non-Hispanic Black and Hispanic populations) relate to educational outcomes or changes resource allocations?**
 
 ---
 
@@ -56,7 +56,13 @@ Key objectives include:
    - **Source:[DCPS](https://opendata.dc.gov/datasets/DCGIS::closed-public-schools/). This included point data for all DCPS schools currently having inactive or status. This GeoJSON was also left joined with the enrollemnts data to get spatial coordinates using School Name. Luckily, all the datasets had entered school names in standardized format. 
    - The three above mentioned datasets were used to map 2018 related data for Map 2a and 2b.
    - Even after the left join, there were 24 schools that were missing geometries as they were not found in any of the datasets. So, I did **geocoding** of the remaining 25 missing points via ESRI’s geocoder. Ultimately, a complete set of school points was obtained and reprojected to EPSG:2248.
+  
+6. **2018 DCPS School STAR Scores Data**  
+   - **Source:[DCPS](https://opendata.dc.gov/datasets/b48c7faa47bd48ddb3184eff4b4cdf60_0)  
+   - The data includes school-level **Framework STAR Rating**, a 1–5 scale summarizing various school performance and quality indicators. The data lacked geometries, so I merged it with the previously processed 2018 geocoded and school diversity dataset — matching on School_Name. This ensured each school could be represented as a point on the map.
+   - For effective visualization of the Star Ratings, [Bootstrap Icons](https://icons.getbootstrap.com/) (circle-fill icons numbered 1–5) were integrated into the map’s markers. This approach minimized the need for separate legends for the STAR layer and enhanced user readability.
 
+---
 
 ## Minority Racial and Ethnic Demographic Changes in DC (2012 and 2018)
 - Looking at the demographic makeup of Washington, D.C., three primary groups—**White**, **Non-Hispanic Black**, and **Hispanic**—account for nearly **95%** of the total population. Given their prominence, these three populations form the core focus of this analysis. To emphasize shifts within the two minority communities (**Non-Hispanic Black** and **Hispanic**), we specifically computed each group’s percentage share of the total population:
@@ -70,7 +76,7 @@ Key objectives include:
 
 ![map1](Map 1 (Final).png)
 
-The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black, Hispanic and White population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, with **Wards 1, 4, and 5 witnessed declines**. Comparatively, **Hispanic population have seen more spread across all wards, expect for Ward 7 and 8**, which largely remain Black. Meanwhile, **White populations have increased noticeably in Wards 2, 3, and 6,** potentially reflecting patterns of redevelopment, gentrification, and shifting housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
+The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black, Hispanic and White population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, with **Wards 1, 4, and 5 witnessed declines**. Comparatively, **Hispanic population have seen more spread across all wards, expect for Ward 7 and 8**, which largely remain Non-Hispanic Black. Meanwhile, **White populations have increased noticeably in Wards 2, 3, and 6,** potentially reflecting patterns of redevelopment, gentrification, and shifting housing markets that have drawn more White and Hispanic residents into previously majority-Non-Hispanic Black neighborhoods.
 
 **Although the city’s overall population may be growing more diverse, the spatial patterns suggest that certain wards remain predominantly one group, indicating that some form of racial and ethnic clustering persists.** In other words, while a city-wide perspective hints at increasing diversity, the localized view raises questions about whether this diversity is evenly distributed or concentrated in certain areas, potentially influencing access to resources and long-term educational outcomes.
 
@@ -99,20 +105,36 @@ For the analysis, following are the metrics that were created, along with their 
 
 The above map is presented as **small multiples** to visually compare 2012 and 2018 simultaneously. A custom color legend was constructed using `matplotlib.patches.Patch` objects, mapping each diversity status and plurality race combination to a color dictionary consistent, easily interpretable symbolization across both 2012 and 2018 subplots.
 
-It can be seen that schools’ diversity levels follow patterns similar to those observed in Map 1. While new schools appear in Wards 3 and 4—often becoming more diverse with White and Hispanic plurality groups—Wards 7 and 8 remain predominantly Black, showing comparatively little change in their demographic composition.
+It can be seen that schools’ diversity levels follow patterns similar to those observed in Map 1. While new schools appear in Wards 3 and 4—often becoming more diverse with White and Hispanic plurality groups—Wards 7 and 8 remain predominantly Non-Hispanic Black, showing comparatively little change in their demographic composition.
 
 
 ### **Map 2b: Change in Diversity in DCPS (between 2012 & 2018)**
 
+For further analysis, the change in level of diversity at each school level was mapped. I focused on schools present in both 2012 and 2018 datasets (inner join by school name) to ensure a valid baseline and an end-point for measuring change. Using diversity score, the change in diversity was calculated. To visualize the magnitude of change, **buffers** around each school point were created based on the direction and size of change. The buffer radius was scaled by the absolute value of the diversity change whereby larger buffers represent a greater magnitude of change. Moreoevr, the buffers were created after reprojecting to CRS EPSG:2248, ensuring accurate distance-based buffering.
+
+     `Diversity_Change = Diversity_Score_2018 - Diversity_Score_2012 
+       - (+ve value) = increased diversity; (-ve value) = decreased diversity`
+
+
 ![Map2b](Map 2b.png)
+
+
+To effectively format and visualze the results, **diverging colormap** RdYlGn was chosen, and alpha were adjusted to 0.7 for clarity so that all buffers are visible, even if there is overlap. A continuous colorbar was added to convey the magnitude of changes.
+
+This map further reiterates that while diversity is on the rise citywide, it remains unevenly distributed and segregated within certain wards, potentially influencing the equitable allocation of educational resources and long-term opportunities for students.
+
 
 ---
 
-## Interactive Map: DC Public Schools (2018)
+
+## Interactive Map: Diversity and Performance in DCPS (2018)
+
+The interactive map combines multiple layers into a single **Folium-based web map**. After loading the STAR enrollment dataset, a left join with the 2018 school diversity data provided a unified dataset containing both diversity metrics and STAR ratings (mentioned below). Missing geometries were retrieved from open/closed school shapefiles or via ESRI geocoding, ensuring all points were plotted consistently. A **CartoDB Positron** basemap was selected as it gives a clean and neutral background. Moreover, a **custom HTML legend** was created for the Diversity & Plurality Status layer.
 
 ##### *Below is an interactive map overlaying school-level data on diversity and STAR ratings. You can use the layer control (top-right corner) to toggle between different datasets (Diversity & Plurality Status, School STAR Rating, and Wards). Hovering over a school marker displays basic details, and clicking on a marker opens a pop-up with more in-depth information.*
 
 <iframe src="final_map_nb (1).html" height="850" width="900"></iframe>
 *You can explore this map [as its own web page here](final_map_nb (1).html).*
 
+From the map, additional context emerges regarding the relationship between racial/ethnic clustering and educational outcomes. Schools in Wards 7 and 8, which are predominantly Non-Hispanic Black and less racially diverse, generally have STAR Ratings averaging around 1–3. In contrast, schools in Wards 1, 2, and 3—where more White and Hispanic populations are present and diversity levels are higher—tend to score between 3–5. This suggests that racial and ethnic segregation may correlate with disparities in school performance and resources, as reflected by the STAR Framework’s school quality and performance metrics.
 
