@@ -66,7 +66,9 @@ The maps show that, between 2012 and 2018, the **geographic distribution of the 
 
 ---
 
-![Map2b](Map 2b.png)
+<p align="center">
+  <img src="Map2b.png" alt="Map 2b" />
+</p>
 
 ---
 
