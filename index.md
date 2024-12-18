@@ -123,9 +123,7 @@ To effectively format and visualze the results, **diverging colormap** RdYlGn wa
 
 This map further reiterates that while diversity is on the rise citywide, it remains unevenly distributed and segregated within certain wards, potentially influencing the equitable allocation of educational resources and long-term opportunities for students.
 
-
 ---
-
 
 ## Interactive Map: Diversity and Performance in DCPS (2018)
 
@@ -133,8 +131,10 @@ The interactive map combines multiple layers into a single **Folium-based web ma
 
 ##### *Below is an interactive map overlaying school-level data on diversity and STAR ratings. You can use the layer control (top-right corner) to toggle between different datasets (Diversity & Plurality Status, School STAR Rating, and Wards). Hovering over a school marker displays basic details, and clicking on a marker opens a pop-up with more in-depth information.*
 
+
 <iframe src="final_map_nb (1).html" height="850" width="900"></iframe>
 *You can explore this map [as its own web page here](final_map_nb (1).html).*
+
 
 From the map, additional context emerges regarding the relationship between racial/ethnic clustering and educational outcomes. Schools in Wards 7 and 8, which are predominantly Non-Hispanic Black and less racially diverse, generally have STAR Ratings averaging around 1–3. In contrast, schools in Wards 1, 2, and 3—where more White and Hispanic populations are present and diversity levels are higher—tend to score between 3–5. This suggests that racial and ethnic segregation may correlate with disparities in school performance and resources, as reflected by the STAR Framework’s school quality and performance metrics.
 
