@@ -54,7 +54,7 @@ Key objectives include:
 
 ### **Map 1: Non-Hispanic Black % in D.C. Census Tracts (2012 & 2018)**  
 
-![map1](map 1.png)
+![map1](Map 1 (Final).png)
 
 The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, reinforcing these areas as long-standing centers of Black community life. Conversely, **Wards 1, 4, and 5 witnessed declines**, possibly reflecting patterns of redevelopment, gentrification, and changing housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
 
@@ -62,11 +62,11 @@ The maps show that, between 2012 and 2018, the **geographic distribution of the 
 
 ---
 
-![map2a](map 2a.png)
+![Map2a](Map 2a.png)
 
 ---
 
-![map2b](map 2b.png)
+![Map2b](Map 2b.png)
 
 ---
 
