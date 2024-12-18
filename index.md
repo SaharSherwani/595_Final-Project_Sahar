@@ -57,6 +57,7 @@ Key objectives include:
   
 6. **2018 DCPS School STAR Scores Data**  
    - *Source:[DCPS](https://opendata.dc.gov/datasets/b48c7faa47bd48ddb3184eff4b4cdf60_0).* The data includes school-level **Framework STAR Rating**, a 1–5 scale summarizing various school performance and quality indicators. The data lacked geometries, so I merged it with the previously processed 2018 geocoded and school diversity dataset — matching on School_Name. This ensured each school could be represented as a point on the map.
+   - One issue found was that score for 4 schools were missing so they their scores/ratings have not been added to the map.
    - For effective visualization of the Star Ratings, **[Bootstrap Icons](https://icons.getbootstrap.com/)** (circle-fill icons numbered 1–5) were integrated into the map’s markers. This approach minimized the need for separate legends for the STAR layer and enhanced user readability.
 
 ---
