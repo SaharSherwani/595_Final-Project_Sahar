@@ -64,8 +64,8 @@ Key objectives include:
 ## Minority Racial and Ethnic Demographic Changes in DC (2012 and 2018)
 - Looking at the demographic makeup of Washington, D.C., three primary groups—**White**, **Non-Hispanic Black**, and **Hispanic**—account for nearly **95%** of the total population [McAllister, 2024](https://nchstats.com/washington-dc-population/). Given their prominence, these three populations form the core focus of this analysis. To emphasize shifts within the two minority communities (**Non-Hispanic Black** and **Hispanic**), we specifically computed each group’s percentage share of the total population:
   
-      `Non-Hispanic Black Population % = (Non-Hispanic Black Population (Estimate) / Total Population (Estimate) * 100`
-            `Hispanic Population % = (Hispanic Population (Estimate) / Total Population (Estimate) * 100`
+      Non-Hispanic Black Population % = (Non-Hispanic Black Population (Estimate) / Total Population (Estimate) * 100
+            Hispanic Population % = (Hispanic Population (Estimate) / Total Population (Estimate) * 100
   
 - These derived percentages facilitate direct comparisons across different time frames and census tracts, providing clearer insights into how these communities’ spatial distributions and relative proportions have evolved. Moreover, Fisher-Jenks classification based on the 2018 distribution were first found and same breaks were used for 2012 to ensure consistency across temporal comparisons. To show side by side comparisons, small multiples appraoch was used. 
 
@@ -86,14 +86,14 @@ For the analysis, following are the metrics that were created, along with their 
 
      Race & Diversity Metrics:
       
-      `Plurality Race: race with the highest percentage at a given school (using idmax value)`
+      Plurality Race: race with the highest percentage at a given school (using idmax value)
 
-      `Majority Race: If the plurality race percentage is >70% then `majority race` = `Plurality_Race`, else none.`
+      Majority Race: If the plurality race percentage is >70% then `majority race` = `Plurality_Race`, else none.
 
-      `Diverse Status: School is considered "Not Diverse" (if Plurality Race >70%); "Diverse" (if no group >70%).`
+      Diverse Status: School is considered "Not Diverse" (if Plurality Race >70%); "Diverse" (if no group >70%).
 
-      `Diversity Score: % sum of all OTHER groups besides the plurality group.
-         - A higher score indicates balanced racial distribution so more diverse.`
+      Diversity Score: % sum of all OTHER groups besides the plurality group.
+         - A higher score indicates balanced racial distribution so more diverse.
 
 ### **Map 2a: Diversity and Plurality in DCPS (2012 & 2018)**
 
@@ -109,8 +109,8 @@ It can be seen that schools’ diversity levels follow patterns similar to those
 
 For further analysis, the change in level of diversity at each school level was mapped. I focused on schools present in both 2012 and 2018 datasets (inner join by school name) to ensure a valid baseline and an end-point for measuring change. Using diversity score, the change in diversity was calculated. To visualize the magnitude of change, **buffers** around each school point were created based on the direction and size of change. The buffer radius was scaled by the absolute value of the diversity change whereby larger buffers represent a greater magnitude of change. Moreoevr, the buffers were created after reprojecting to CRS EPSG:2248, ensuring accurate distance-based buffering.
 
-     `Diversity_Change = Diversity_Score_2018 - Diversity_Score_2012 
-       - (+ve value) = increased diversity; (-ve value) = decreased diversity`
+     Diversity_Change = Diversity_Score_2018 - Diversity_Score_2012 
+       - (+ve value) = increased diversity; (-ve value) = decreased diversity
 
 
 ![Map2b](Map 2b.png)
