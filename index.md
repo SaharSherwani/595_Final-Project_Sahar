@@ -87,14 +87,14 @@ For the analysis, following are the metrics that were created, along with their 
 
      Race & Diversity Metrics:
       
-      Plurality Race: race with the highest percentage at a given school (using idmax value)
+              Plurality Race: race with the highest percentage at a given school (using idmax value)
 
-      Majority Race: If the plurality race percentage is >70% then `majority race` = `Plurality_Race`, else none.
+              Majority Race: If the plurality race percentage is >70% then `majority race` = `Plurality_Race`, else none.
 
-      Diverse Status: School is considered "Not Diverse" (if Plurality Race >70%); "Diverse" (if no group >70%).
+              Diverse Status: School is considered "Not Diverse" (if Plurality Race >70%); "Diverse" (if no group >70%).
 
-      Diversity Score: % sum of all OTHER groups besides the plurality group.
-         - A higher score indicates balanced racial distribution so more diverse.
+              Diversity Score: % sum of all OTHER groups besides the plurality group.
+                - A higher score indicates balanced racial distribution so more diverse.
 
 ### **Map 2a: Diversity and Plurality in DCPS (2012 & 2018)**
 
@@ -110,8 +110,8 @@ It can be seen that schools’ diversity levels follow patterns similar to those
 
 For further analysis, the change in level of diversity at each school level was mapped. I focused on schools present in both 2012 and 2018 datasets (inner join by school name) to ensure a valid baseline and an end-point for measuring change. Using diversity score, the change in diversity was calculated. To visualize the magnitude of change, **buffers** around each school point were created based on the direction and size of change. The buffer radius was scaled by the absolute value of the diversity change whereby larger buffers represent a greater magnitude of change. Moreoevr, the buffers were created after reprojecting to CRS EPSG:2248, ensuring accurate distance-based buffering.
 
-     Diversity_Change = Diversity_Score_2018 - Diversity_Score_2012 
-       - (+ve value) = increased diversity; (-ve value) = decreased diversity
+                       Diversity_Change = Diversity_Score_2018 - Diversity_Score_2012 
+                          - (+ve value) = increased diversity; (-ve value) = decreased diversity
 
 
 ![Map2b](Map 2b.png)
