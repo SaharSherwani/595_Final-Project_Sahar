@@ -85,23 +85,24 @@ For the analysis, following are the metrics that were created, along with their 
       
       `Plurality Race: race with the highest percentage at a given school (using idmax value)`
 
-      `Majority Race: If the plurality race percentage is >70% 
-            then `majority race` = `Plurality_Race`, else none.`
+      `Majority Race: If the plurality race percentage is >70% then `majority race` = `Plurality_Race`, else none.`
 
-      `Diverse Status: School is considered "Not Diverse" (if Plurality Race >70%); 
-                                            "Diverse" (if no group >70%).`
+      `Diverse Status: School is considered "Not Diverse" (if Plurality Race >70%); "Diverse" (if no group >70%).`
 
       `Diversity Score: % sum of all OTHER groups besides the plurality group.
          - A higher score indicates balanced racial distribution so more diverse.`
 
+### **Map 2a: Diversity and Plurality in DCPS (2012 & 2018)**
 
 ![Map2a](Map 2a.png)
 
 
-The above map is presented as **small multiples** to visually compare 2012 and 2018 simultaneously. Each subplot uses the same color dictionary and symbology, ensuring straightforward interpretation. The `adjustText` library aids in preventing label collisions, ensuring a cleaner presentation.
+The above map is presented as **small multiples** to visually compare 2012 and 2018 simultaneously. A custom color legend was constructed using `matplotlib.patches.Patch` objects, mapping each diversity status and plurality race combination to a color dictionary consistent, easily interpretable symbolization across both 2012 and 2018 subplots.
+
+It can be seen that schools’ diversity levels follow patterns similar to those observed in Map 1. While new schools appear in Wards 3 and 4—often becoming more diverse with White and Hispanic plurality groups—Wards 7 and 8 remain predominantly Black, showing comparatively little change in their demographic composition.
 
 
----
+### **Map 2b: Change in Diversity in DCPS (between 2012 & 2018)**
 
 ![Map2b](Map 2b.png)
 
