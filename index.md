@@ -38,10 +38,10 @@ Key objectives include:
 
 ### **Datasets and Sources:**  
 - **Hispanic or Latino Origin by Race (Table B03002) American Community Survey (ACS) 5-Year Estimates (2012 & 2018)**  
-  - **Source: U.S. Census Bureau  [data.census.gov](https://data.census.gov/table/ACSDT1Y2021.B03002)*
+  - *Source: U.S. Census Bureau  [data.census.gov](https://data.census.gov/table/ACSDT1Y2021.B03002)*
   - The data was accessed via the Census API, and included estimates (E) and margins of error (M) for each racial category. For the purposes of this project, only DC state level census tract data was then brought in and matched to these.
-  - CVs were calculated using `census_data_aggregator` to determine data reliability, and the zero or missing population values were replaced with `NaN` to avoid division errors; and for mapping, only reliable estimates (CV ≤ 40%) were used. 
-  - For effective mapping, all layers (Ward, tracts etc) were reprojected to Maryland State Plane (EPSG:2248).
+  - CVs were calculated using `census_data_aggregator` to determine data reliability, and the zero or missing population values were replaced with `NaN` to avoid division errors. Tracts with low reliability (CV ≥ 40%) were marked using overlay. One issue, potentially related to data quality and small smaple sizes in certain tracts and wards, many estimates were marked as low reliability, particularly for Hispanic and White population maps in 2012. These were seen to improve in 2018 (Hispanic population reliable tracts increased from 82 to 112, and for White population from 124 to 140 - from total 179). 
+  - For effective mapping, all layers (Ward, tracts etc) were reprojected to `Maryland State Plane (EPSG:2248)`.
   - Applied **Fisher-Jenks classification** based on the 2018 distribution and used the same breaks for 2012 to ensure consistency across temporal comparisons.
 
 ## Minority Racial and Ethnic Demographic Changes in DC (2012 and 2018)
@@ -56,7 +56,7 @@ Key objectives include:
 
 ![map1](Map 1 (Final).png)
 
-The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, reinforcing these areas as long-standing centers of Black community life. Conversely, **Wards 1, 4, and 5 witnessed declines**, possibly reflecting patterns of redevelopment, gentrification, and changing housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
+The maps show that, between 2012 and 2018, the **geographic distribution of the Non-Hispanic Black, Hispanic and White population has shifted in ways that highlight broader demographic transitions within D.C.** Notably, **Wards 7 and 8 experienced an increase in Non-Hispanic Black percentages**, with **Wards 1, 4, and 5 witnessed declines**. Comparatively, **Hispanic population have seen more spread across all wards, expect for Ward 7 and 8**, which largely remain Black. Meanwhile, **White populations have increased noticeably in Wards 2, 3, and 6,** potentially reflecting patterns of redevelopment, gentrification, and shifting housing markets that have drawn more White and Hispanic residents into previously majority-Black neighborhoods.
 
 **Although the city’s overall population may be growing more diverse, the spatial patterns suggest that certain wards remain predominantly one group, indicating that some form of racial and ethnic clustering persists.** In other words, while a city-wide perspective hints at increasing diversity, the localized view raises questions about whether this diversity is evenly distributed or concentrated in certain areas, potentially influencing access to resources and long-term educational outcomes.
 
